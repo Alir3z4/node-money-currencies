@@ -1,0 +1,26 @@
+{
+  "name": "money-currencies",
+  "version": "1.0.0",
+  "description": "Display money format and its filthy currencies, for all money lovers out there.",
+  "main": "money_currencies/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Alir3z4/node-money-currencies.git"
+  },
+  "keywords": [
+    "money",
+    "currency",
+    "format",
+    "money",
+    "format"
+  ],
+  "author": "Alireza Savand <alireza.savand@gmail.com> (https://github.com/Alir3z4)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Alir3z4/node-money-currencies/issues"
+  },
+  "homepage": "https://github.com/Alir3z4/node-money-currencies"
+}
