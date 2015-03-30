@@ -18,7 +18,12 @@
     "format"
   ],
   "author": "Alireza Savand <alireza.savand@gmail.com> (https://github.com/Alir3z4)",
-  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/Alir3z4/node-money-currencies/blob/master/LICENSE.md"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/Alir3z4/node-money-currencies/issues"
   },
