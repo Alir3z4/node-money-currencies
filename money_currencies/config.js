@@ -1,495 +1,495 @@
 'use strict';
 
-var MONEY_FORMATS = {
+var MoneyFormats = {
     'AED': {
-        'money_format': 'Dhs. {amount}',
-        'money_with_currency_format': 'Dhs. {amount} AED'
+        'moneyFormat': 'Dhs. {amount}',
+        'moneyWithCurrencyFormat': 'Dhs. {amount} AED'
     },
     'ALL': {
-        'money_format': 'Lek {amount}',
-        'money_with_currency_format': 'Lek {amount} ALL'
+        'moneyFormat': 'Lek {amount}',
+        'moneyWithCurrencyFormat': 'Lek {amount} ALL'
     },
     'AMD': {
-        'money_format': '{amount} AMD',
-        'money_with_currency_format': '{amount} AMD'
+        'moneyFormat': '{amount} AMD',
+        'moneyWithCurrencyFormat': '{amount} AMD'
     },
     'ANG': {
-        'money_format': 'ƒ{amount}',
-        'money_with_currency_format': '{amount} NAƒ'
+        'moneyFormat': 'ƒ{amount}',
+        'moneyWithCurrencyFormat': '{amount} NAƒ'
     },
     'AOA': {
-        'money_format': 'Kz{amount}',
-        'money_with_currency_format': 'Kz{amount} AOA'
+        'moneyFormat': 'Kz{amount}',
+        'moneyWithCurrencyFormat': 'Kz{amount} AOA'
     },
     'ARS': {
-        'money_format': '${amount}',
-        'money_with_currency_format': '${amount} ARS'
+        'moneyFormat': '${amount}',
+        'moneyWithCurrencyFormat': '${amount} ARS'
     },
     'AUD': {
-        'money_format': '${amount}',
-        'money_with_currency_format': '${amount} AUD'
+        'moneyFormat': '${amount}',
+        'moneyWithCurrencyFormat': '${amount} AUD'
     },
     'AWG': {
-        'money_format': 'Afl{amount}',
-        'money_with_currency_format': 'Afl{amount} AWG'
+        'moneyFormat': 'Afl{amount}',
+        'moneyWithCurrencyFormat': 'Afl{amount} AWG'
     },
     'AZN': {
-        'money_format': 'm.{amount}',
-        'money_with_currency_format': 'm.{amount} AZN'
+        'moneyFormat': 'm.{amount}',
+        'moneyWithCurrencyFormat': 'm.{amount} AZN'
     },
     'BAM': {
-        'money_format': 'KM {amount}',
-        'money_with_currency_format': 'KM {amount} BAM'
+        'moneyFormat': 'KM {amount}',
+        'moneyWithCurrencyFormat': 'KM {amount} BAM'
     },
     'BBD': {
-        'money_format': '${amount}',
-        'money_with_currency_format': '${amount} Bds'
+        'moneyFormat': '${amount}',
+        'moneyWithCurrencyFormat': '${amount} Bds'
     },
     'BDT': {
-        'money_format': 'Tk {amount}',
-        'money_with_currency_format': 'Tk {amount} BDT'
+        'moneyFormat': 'Tk {amount}',
+        'moneyWithCurrencyFormat': 'Tk {amount} BDT'
     },
     'BGN': {
-        'money_format': '{amount} лв',
-        'money_with_currency_format': '{amount} лв BGN'
+        'moneyFormat': '{amount} лв',
+        'moneyWithCurrencyFormat': '{amount} лв BGN'
     },
     'BHD': {
-        'money_format': '{amount} BD',
-        'money_with_currency_format': '{amount} BHD'
+        'moneyFormat': '{amount} BD',
+        'moneyWithCurrencyFormat': '{amount} BHD'
     },
     'BND': {
-        'money_format': '${amount}',
-        'money_with_currency_format': '${amount} BND'
+        'moneyFormat': '${amount}',
+        'moneyWithCurrencyFormat': '${amount} BND'
     },
     'BOB': {
-        'money_format': 'Bs{amount}',
-        'money_with_currency_format': 'Bs{amount} BOB'
+        'moneyFormat': 'Bs{amount}',
+        'moneyWithCurrencyFormat': 'Bs{amount} BOB'
     },
     'BRL': {
-        'money_format': 'R$ {amount}',
-        'money_with_currency_format': 'R$ {amount} BRL'
+        'moneyFormat': 'R$ {amount}',
+        'moneyWithCurrencyFormat': 'R$ {amount} BRL'
     },
     'BSD': {
-        'money_format': 'BS${amount}',
-        'money_with_currency_format': 'BS${amount} BSD'
+        'moneyFormat': 'BS${amount}',
+        'moneyWithCurrencyFormat': 'BS${amount} BSD'
     },
     'BTN': {
-        'money_format': 'Nu {amount}',
-        'money_with_currency_format': 'Nu {amount} BTN'
+        'moneyFormat': 'Nu {amount}',
+        'moneyWithCurrencyFormat': 'Nu {amount} BTN'
     },
     'BWP': {
-        'money_format': 'P{amount}',
-        'money_with_currency_format': 'P{amount} BWP'
+        'moneyFormat': 'P{amount}',
+        'moneyWithCurrencyFormat': 'P{amount} BWP'
     },
     'BYR': {
-        'money_format': 'Br {amount}',
-        'money_with_currency_format': 'Br {amount} BYR'
+        'moneyFormat': 'Br {amount}',
+        'moneyWithCurrencyFormat': 'Br {amount} BYR'
     },
     'BZD': {
-        'money_format': 'BZ${amount}',
-        'money_with_currency_format': 'BZ${amount} BZD'
+        'moneyFormat': 'BZ${amount}',
+        'moneyWithCurrencyFormat': 'BZ${amount} BZD'
     },
     'CAD': {
-        'money_format': '${amount}',
-        'money_with_currency_format': '${amount} CAD'
+        'moneyFormat': '${amount}',
+        'moneyWithCurrencyFormat': '${amount} CAD'
     },
     'CHF': {
-        'money_format': 'SFr. {amount}',
-        'money_with_currency_format': 'SFr. {amount} CHF'
+        'moneyFormat': 'SFr. {amount}',
+        'moneyWithCurrencyFormat': 'SFr. {amount} CHF'
     },
     'CLP': {
-        'money_format': '${amount}',
-        'money_with_currency_format': '${amount} CLP'
+        'moneyFormat': '${amount}',
+        'moneyWithCurrencyFormat': '${amount} CLP'
     },
     'CNY': {
-        'money_format': '¥{amount}',
-        'money_with_currency_format': '¥{amount} CNY'
+        'moneyFormat': '¥{amount}',
+        'moneyWithCurrencyFormat': '¥{amount} CNY'
     },
     'COP': {
-        'money_format': '${amount}',
-        'money_with_currency_format': '${amount} COP'
+        'moneyFormat': '${amount}',
+        'moneyWithCurrencyFormat': '${amount} COP'
     },
     'CRC': {
-        'money_format': '₡ {amount}',
-        'money_with_currency_format': '₡ {amount} CRC'
+        'moneyFormat': '₡ {amount}',
+        'moneyWithCurrencyFormat': '₡ {amount} CRC'
     },
     'CZK': {
-        'money_format': '{amount} Kč',
-        'money_with_currency_format': '{amount} Kč'
+        'moneyFormat': '{amount} Kč',
+        'moneyWithCurrencyFormat': '{amount} Kč'
     },
     'DKK': {
-        'money_format': '{amount}',
-        'money_with_currency_format': 'kr.{amount}'
+        'moneyFormat': '{amount}',
+        'moneyWithCurrencyFormat': 'kr.{amount}'
     },
     'DOP': {
-        'money_format': 'RD$ {amount}',
-        'money_with_currency_format': 'RD$ {amount}'
+        'moneyFormat': 'RD$ {amount}',
+        'moneyWithCurrencyFormat': 'RD$ {amount}'
     },
     'DZD': {
-        'money_format': 'DA {amount}',
-        'money_with_currency_format': 'DA {amount} DZD'
+        'moneyFormat': 'DA {amount}',
+        'moneyWithCurrencyFormat': 'DA {amount} DZD'
     },
     'EGP': {
-        'money_format': 'LE {amount}',
-        'money_with_currency_format': 'LE {amount} EGP'
+        'moneyFormat': 'LE {amount}',
+        'moneyWithCurrencyFormat': 'LE {amount} EGP'
     },
     'ETB': {
-        'money_format': 'Br{amount}',
-        'money_with_currency_format': 'Br{amount} ETB'
+        'moneyFormat': 'Br{amount}',
+        'moneyWithCurrencyFormat': 'Br{amount} ETB'
     },
     'EUR': {
-        'money_format': '€{amount}',
-        'money_with_currency_format': '€{amount} EUR'
+        'moneyFormat': '€{amount}',
+        'moneyWithCurrencyFormat': '€{amount} EUR'
     },
     'FJD': {
-        'money_format': '${amount}',
-        'money_with_currency_format': 'FJ${amount}'
+        'moneyFormat': '${amount}',
+        'moneyWithCurrencyFormat': 'FJ${amount}'
     },
     'GBP': {
-        'money_format': '£{amount}',
-        'money_with_currency_format': '£{amount} GBP'
+        'moneyFormat': '£{amount}',
+        'moneyWithCurrencyFormat': '£{amount} GBP'
     },
     'GEL': {
-        'money_format': '{amount} GEL',
-        'money_with_currency_format': '{amount} GEL'
+        'moneyFormat': '{amount} GEL',
+        'moneyWithCurrencyFormat': '{amount} GEL'
     },
     'GHS': {
-        'money_format': 'GH₵{amount}',
-        'money_with_currency_format': 'GH₵{amount}'
+        'moneyFormat': 'GH₵{amount}',
+        'moneyWithCurrencyFormat': 'GH₵{amount}'
     },
     'GMD': {
-        'money_format': 'D {amount}',
-        'money_with_currency_format': 'D {amount} GMD'
+        'moneyFormat': 'D {amount}',
+        'moneyWithCurrencyFormat': 'D {amount} GMD'
     },
     'GTQ': {
-        'money_format': 'Q{amount}',
-        'money_with_currency_format': '{amount} GTQ'
+        'moneyFormat': 'Q{amount}',
+        'moneyWithCurrencyFormat': '{amount} GTQ'
     },
     'GYD': {
-        'money_format': 'G${amount}',
-        'money_with_currency_format': '${amount} GYD'
+        'moneyFormat': 'G${amount}',
+        'moneyWithCurrencyFormat': '${amount} GYD'
     },
     'HKD': {
-        'money_format': '${amount}',
-        'money_with_currency_format': 'HK${amount}'
+        'moneyFormat': '${amount}',
+        'moneyWithCurrencyFormat': 'HK${amount}'
     },
     'HNL': {
-        'money_format': 'L {amount}',
-        'money_with_currency_format': 'L {amount} HNL'
+        'moneyFormat': 'L {amount}',
+        'moneyWithCurrencyFormat': 'L {amount} HNL'
     },
     'HRK': {
-        'money_format': '{amount} kn',
-        'money_with_currency_format': '{amount} kn HRK'
+        'moneyFormat': '{amount} kn',
+        'moneyWithCurrencyFormat': '{amount} kn HRK'
     },
     'HUF': {
-        'money_format': '{amount}',
-        'money_with_currency_format': '{amount} Ft'
+        'moneyFormat': '{amount}',
+        'moneyWithCurrencyFormat': '{amount} Ft'
     },
     'IDR': {
-        'money_format': '{amount}',
-        'money_with_currency_format': 'Rp {amount}'
+        'moneyFormat': '{amount}',
+        'moneyWithCurrencyFormat': 'Rp {amount}'
     },
     'ILS': {
-        'money_format': '{amount} NIS',
-        'money_with_currency_format': '{amount} NIS'
+        'moneyFormat': '{amount} NIS',
+        'moneyWithCurrencyFormat': '{amount} NIS'
     },
     'INR': {
-        'money_format': 'Rs. {amount}',
-        'money_with_currency_format': 'Rs. {amount}'
+        'moneyFormat': 'Rs. {amount}',
+        'moneyWithCurrencyFormat': 'Rs. {amount}'
     },
     'ISK': {
-        'money_format': '{amount} kr',
-        'money_with_currency_format': '{amount} kr ISK'
+        'moneyFormat': '{amount} kr',
+        'moneyWithCurrencyFormat': '{amount} kr ISK'
     },
     'JEP': {
-        'money_format': '£{amount}',
-        'money_with_currency_format': '£{amount} JEP'
+        'moneyFormat': '£{amount}',
+        'moneyWithCurrencyFormat': '£{amount} JEP'
     },
     'JMD': {
-        'money_format': '${amount}',
-        'money_with_currency_format': '${amount} JMD'
+        'moneyFormat': '${amount}',
+        'moneyWithCurrencyFormat': '${amount} JMD'
     },
     'JOD': {
-        'money_format': '{amount} JD',
-        'money_with_currency_format': '{amount} JOD'
+        'moneyFormat': '{amount} JD',
+        'moneyWithCurrencyFormat': '{amount} JOD'
     },
     'JPY': {
-        'money_format': '¥{amount}',
-        'money_with_currency_format': '¥{amount} JPY'
+        'moneyFormat': '¥{amount}',
+        'moneyWithCurrencyFormat': '¥{amount} JPY'
     },
     'KES': {
-        'money_format': 'KSh{amount}',
-        'money_with_currency_format': 'KSh{amount}'
+        'moneyFormat': 'KSh{amount}',
+        'moneyWithCurrencyFormat': 'KSh{amount}'
     },
     'KGS': {
-        'money_format': 'лв{amount}',
-        'money_with_currency_format': 'лв{amount}'
+        'moneyFormat': 'лв{amount}',
+        'moneyWithCurrencyFormat': 'лв{amount}'
     },
     'KHR': {
-        'money_format': 'KHR{amount}',
-        'money_with_currency_format': 'KHR{amount}'
+        'moneyFormat': 'KHR{amount}',
+        'moneyWithCurrencyFormat': 'KHR{amount}'
     },
     'KRW': {
-        'money_format': '₩{amount}',
-        'money_with_currency_format': '₩{amount} KRW'
+        'moneyFormat': '₩{amount}',
+        'moneyWithCurrencyFormat': '₩{amount} KRW'
     },
     'KWD': {
-        'money_format': '{amount} KD',
-        'money_with_currency_format': '{amount} KWD'
+        'moneyFormat': '{amount} KD',
+        'moneyWithCurrencyFormat': '{amount} KWD'
     },
     'KYD': {
-        'money_format': '${amount}',
-        'money_with_currency_format': '${amount} KYD'
+        'moneyFormat': '${amount}',
+        'moneyWithCurrencyFormat': '${amount} KYD'
     },
     'KZT': {
-        'money_format': '{amount} KZT',
-        'money_with_currency_format': '{amount} KZT'
+        'moneyFormat': '{amount} KZT',
+        'moneyWithCurrencyFormat': '{amount} KZT'
     },
     'LBP': {
-        'money_format': 'L£{amount}',
-        'money_with_currency_format': 'L£{amount} LBP'
+        'moneyFormat': 'L£{amount}',
+        'moneyWithCurrencyFormat': 'L£{amount} LBP'
     },
     'LKR': {
-        'money_format': 'Rs {amount}',
-        'money_with_currency_format': 'Rs {amount} LKR'
+        'moneyFormat': 'Rs {amount}',
+        'moneyWithCurrencyFormat': 'Rs {amount} LKR'
     },
     'LTL': {
-        'money_format': '{amount} Lt',
-        'money_with_currency_format': '{amount} Lt'
+        'moneyFormat': '{amount} Lt',
+        'moneyWithCurrencyFormat': '{amount} Lt'
     },
     'LVL': {
-        'money_format': 'Ls {amount}',
-        'money_with_currency_format': 'Ls {amount} LVL'
+        'moneyFormat': 'Ls {amount}',
+        'moneyWithCurrencyFormat': 'Ls {amount} LVL'
     },
     'MAD': {
-        'money_format': '{amount} dh',
-        'money_with_currency_format': 'Dh {amount} MAD'
+        'moneyFormat': '{amount} dh',
+        'moneyWithCurrencyFormat': 'Dh {amount} MAD'
     },
     'MDL': {
-        'money_format': '{amount} MDL',
-        'money_with_currency_format': '{amount} MDL'
+        'moneyFormat': '{amount} MDL',
+        'moneyWithCurrencyFormat': '{amount} MDL'
     },
     'MGA': {
-        'money_format': 'Ar {amount}',
-        'money_with_currency_format': 'Ar {amount} MGA'
+        'moneyFormat': 'Ar {amount}',
+        'moneyWithCurrencyFormat': 'Ar {amount} MGA'
     },
     'MKD': {
-        'money_format': 'ден {amount}',
-        'money_with_currency_format': 'ден {amount} MKD'
+        'moneyFormat': 'ден {amount}',
+        'moneyWithCurrencyFormat': 'ден {amount} MKD'
     },
     'MMK': {
-        'money_format': 'K{amount}',
-        'money_with_currency_format': 'K{amount} MMK'
+        'moneyFormat': 'K{amount}',
+        'moneyWithCurrencyFormat': 'K{amount} MMK'
     },
     'MNT': {
-        'money_format': '{amount} ₮',
-        'money_with_currency_format': '{amount} MNT'
+        'moneyFormat': '{amount} ₮',
+        'moneyWithCurrencyFormat': '{amount} MNT'
     },
     'MOP': {
-        'money_format': 'MOP${amount}',
-        'money_with_currency_format': 'MOP${amount}'
+        'moneyFormat': 'MOP${amount}',
+        'moneyWithCurrencyFormat': 'MOP${amount}'
     },
     'MUR': {
-        'money_format': 'Rs {amount}',
-        'money_with_currency_format': 'Rs {amount} MUR'
+        'moneyFormat': 'Rs {amount}',
+        'moneyWithCurrencyFormat': 'Rs {amount} MUR'
     },
     'MVR': {
-        'money_format': 'Rf{amount}',
-        'money_with_currency_format': 'Rf{amount} MRf'
+        'moneyFormat': 'Rf{amount}',
+        'moneyWithCurrencyFormat': 'Rf{amount} MRf'
     },
     'MXN': {
-        'money_format': '$ {amount}',
-        'money_with_currency_format': '$ {amount} MXN'
+        'moneyFormat': '$ {amount}',
+        'moneyWithCurrencyFormat': '$ {amount} MXN'
     },
     'MYR': {
-        'money_format': 'RM{amount} MYR',
-        'money_with_currency_format': 'RM{amount} MYR'
+        'moneyFormat': 'RM{amount} MYR',
+        'moneyWithCurrencyFormat': 'RM{amount} MYR'
     },
     'MZN': {
-        'money_format': '{amount} Mt',
-        'money_with_currency_format': 'Mt {amount} MZN'
+        'moneyFormat': '{amount} Mt',
+        'moneyWithCurrencyFormat': 'Mt {amount} MZN'
     },
     'NAD': {
-        'money_format': 'N${amount}',
-        'money_with_currency_format': 'N${amount} NAD'
+        'moneyFormat': 'N${amount}',
+        'moneyWithCurrencyFormat': 'N${amount} NAD'
     },
     'NGN': {
-        'money_format': '₦{amount}',
-        'money_with_currency_format': '₦{amount} NGN'
+        'moneyFormat': '₦{amount}',
+        'moneyWithCurrencyFormat': '₦{amount} NGN'
     },
     'NIO': {
-        'money_format': 'C${amount}',
-        'money_with_currency_format': 'C${amount} NIO'
+        'moneyFormat': 'C${amount}',
+        'moneyWithCurrencyFormat': 'C${amount} NIO'
     },
     'NOK': {
-        'money_format': 'kr {amount}',
-        'money_with_currency_format': 'kr {amount} NOK'
+        'moneyFormat': 'kr {amount}',
+        'moneyWithCurrencyFormat': 'kr {amount} NOK'
     },
     'NPR': {
-        'money_format': 'Rs{amount}',
-        'money_with_currency_format': 'Rs{amount} NPR'
+        'moneyFormat': 'Rs{amount}',
+        'moneyWithCurrencyFormat': 'Rs{amount} NPR'
     },
     'NZD': {
-        'money_format': '${amount}',
-        'money_with_currency_format': '${amount} NZD'
+        'moneyFormat': '${amount}',
+        'moneyWithCurrencyFormat': '${amount} NZD'
     },
     'OMR': {
-        'money_format': '{amount} OMR',
-        'money_with_currency_format': '{amount} OMR'
+        'moneyFormat': '{amount} OMR',
+        'moneyWithCurrencyFormat': '{amount} OMR'
     },
     'PEN': {
-        'money_format': 'S/. {amount}',
-        'money_with_currency_format': 'S/. {amount} PEN'
+        'moneyFormat': 'S/. {amount}',
+        'moneyWithCurrencyFormat': 'S/. {amount} PEN'
     },
     'PGK': {
-        'money_format': 'K {amount}',
-        'money_with_currency_format': 'K {amount} PGK'
+        'moneyFormat': 'K {amount}',
+        'moneyWithCurrencyFormat': 'K {amount} PGK'
     },
     'PHP': {
-        'money_format': '₱{amount}',
-        'money_with_currency_format': '₱{amount} PHP'
+        'moneyFormat': '₱{amount}',
+        'moneyWithCurrencyFormat': '₱{amount} PHP'
     },
     'PKR': {
-        'money_format': 'Rs.{amount}',
-        'money_with_currency_format': 'Rs.{amount} PKR'
+        'moneyFormat': 'Rs.{amount}',
+        'moneyWithCurrencyFormat': 'Rs.{amount} PKR'
     },
     'PLN': {
-        'money_format': '{amount} zl',
-        'money_with_currency_format': '{amount} zl PLN'
+        'moneyFormat': '{amount} zl',
+        'moneyWithCurrencyFormat': '{amount} zl PLN'
     },
     'PYG': {
-        'money_format': 'Gs. {amount}',
-        'money_with_currency_format': 'Gs. {amount} PYG'
+        'moneyFormat': 'Gs. {amount}',
+        'moneyWithCurrencyFormat': 'Gs. {amount} PYG'
     },
     'QAR': {
-        'money_format': 'QAR {amount}',
-        'money_with_currency_format': 'QAR {amount}'
+        'moneyFormat': 'QAR {amount}',
+        'moneyWithCurrencyFormat': 'QAR {amount}'
     },
     'RON': {
-        'money_format': '{amount} lei',
-        'money_with_currency_format': '{amount} lei RON'
+        'moneyFormat': '{amount} lei',
+        'moneyWithCurrencyFormat': '{amount} lei RON'
     },
     'RSD': {
-        'money_format': '{amount} RSD',
-        'money_with_currency_format': '{amount} RSD'
+        'moneyFormat': '{amount} RSD',
+        'moneyWithCurrencyFormat': '{amount} RSD'
     },
     'RUB': {
-        'money_format': 'руб{amount}',
-        'money_with_currency_format': 'руб{amount} RUB'
+        'moneyFormat': 'руб{amount}',
+        'moneyWithCurrencyFormat': 'руб{amount} RUB'
     },
     'RWF': {
-        'money_format': '{amount} RF',
-        'money_with_currency_format': '{amount} RWF'
+        'moneyFormat': '{amount} RF',
+        'moneyWithCurrencyFormat': '{amount} RWF'
     },
     'SAR': {
-        'money_format': '{amount} SR',
-        'money_with_currency_format': '{amount} SAR'
+        'moneyFormat': '{amount} SR',
+        'moneyWithCurrencyFormat': '{amount} SAR'
     },
     'SCR': {
-        'money_format': 'Rs {amount}',
-        'money_with_currency_format': 'Rs {amount} SCR'
+        'moneyFormat': 'Rs {amount}',
+        'moneyWithCurrencyFormat': 'Rs {amount} SCR'
     },
     'SEK': {
-        'money_format': '{amount} kr',
-        'money_with_currency_format': '{amount} kr SEK'
+        'moneyFormat': '{amount} kr',
+        'moneyWithCurrencyFormat': '{amount} kr SEK'
     },
     'SGD': {
-        'money_format': '${amount}',
-        'money_with_currency_format': '${amount} SGD'
+        'moneyFormat': '${amount}',
+        'moneyWithCurrencyFormat': '${amount} SGD'
     },
     'STD': {
-        'money_format': 'Db {amount}',
-        'money_with_currency_format': 'Db {amount} STD'
+        'moneyFormat': 'Db {amount}',
+        'moneyWithCurrencyFormat': 'Db {amount} STD'
     },
     'SYP': {
-        'money_format': 'S£{amount}',
-        'money_with_currency_format': 'S£{amount} SYP'
+        'moneyFormat': 'S£{amount}',
+        'moneyWithCurrencyFormat': 'S£{amount} SYP'
     },
     'THB': {
-        'money_format': '{amount} ฿',
-        'money_with_currency_format': '{amount} ฿ THB'
+        'moneyFormat': '{amount} ฿',
+        'moneyWithCurrencyFormat': '{amount} ฿ THB'
     },
     'TND': {
-        'money_format': '{amount}',
-        'money_with_currency_format': '{amount} DT'
+        'moneyFormat': '{amount}',
+        'moneyWithCurrencyFormat': '{amount} DT'
     },
     'TRY': {
-        'money_format': '{amount}TL',
-        'money_with_currency_format': '{amount}TL'
+        'moneyFormat': '{amount}TL',
+        'moneyWithCurrencyFormat': '{amount}TL'
     },
     'TTD': {
-        'money_format': '${amount}',
-        'money_with_currency_format': '${amount} TTD'
+        'moneyFormat': '${amount}',
+        'moneyWithCurrencyFormat': '${amount} TTD'
     },
     'TWD': {
-        'money_format': '${amount}',
-        'money_with_currency_format': '${amount} TWD'
+        'moneyFormat': '${amount}',
+        'moneyWithCurrencyFormat': '${amount} TWD'
     },
     'TZS': {
-        'money_format': '{amount} TZS',
-        'money_with_currency_format': '{amount} TZS'
+        'moneyFormat': '{amount} TZS',
+        'moneyWithCurrencyFormat': '{amount} TZS'
     },
     'UAH': {
-        'money_format': '₴{amount}',
-        'money_with_currency_format': '₴{amount} UAH'
+        'moneyFormat': '₴{amount}',
+        'moneyWithCurrencyFormat': '₴{amount} UAH'
     },
     'UGX': {
-        'money_format': 'Ush {amount}',
-        'money_with_currency_format': 'Ush {amount} UGX'
+        'moneyFormat': 'Ush {amount}',
+        'moneyWithCurrencyFormat': 'Ush {amount} UGX'
     },
     'USD': {
-        'money_format': '${amount}',
-        'money_with_currency_format': '${amount} USD'
+        'moneyFormat': '${amount}',
+        'moneyWithCurrencyFormat': '${amount} USD'
     },
     'UYU': {
-        'money_format': '${amount}',
-        'money_with_currency_format': '${amount} UYU'
+        'moneyFormat': '${amount}',
+        'moneyWithCurrencyFormat': '${amount} UYU'
     },
     'VEF': {
-        'money_format': 'Bs. {amount}',
-        'money_with_currency_format': 'Bs. {amount} VEF'
+        'moneyFormat': 'Bs. {amount}',
+        'moneyWithCurrencyFormat': 'Bs. {amount} VEF'
     },
     'VND': {
-        'money_format': '{amount}₫',
-        'money_with_currency_format': '{amount} VND'
+        'moneyFormat': '{amount}₫',
+        'moneyWithCurrencyFormat': '{amount} VND'
     },
     'VUV': {
-        'money_format': '${amount}',
-        'money_with_currency_format': '${amount}VT'
+        'moneyFormat': '${amount}',
+        'moneyWithCurrencyFormat': '${amount}VT'
     },
     'WST': {
-        'money_format': 'WS$ {amount}',
-        'money_with_currency_format': 'WS$ {amount} WST'
+        'moneyFormat': 'WS$ {amount}',
+        'moneyWithCurrencyFormat': 'WS$ {amount} WST'
     },
     'XAF': {
-        'money_format': 'FCFA{amount}',
-        'money_with_currency_format': 'FCFA{amount} XAF'
+        'moneyFormat': 'FCFA{amount}',
+        'moneyWithCurrencyFormat': 'FCFA{amount} XAF'
     },
     'XBT': {
-        'money_format': '{amount} BTC',
-        'money_with_currency_format': '{amount} BTC'
+        'moneyFormat': '{amount} BTC',
+        'moneyWithCurrencyFormat': '{amount} BTC'
     },
     'XCD': {
-        'money_format': '${amount}',
-        'money_with_currency_format': 'EC${amount}'
+        'moneyFormat': '${amount}',
+        'moneyWithCurrencyFormat': 'EC${amount}'
     },
     'XOF': {
-        'money_format': 'CFA{amount}',
-        'money_with_currency_format': 'CFA{amount} XOF'
+        'moneyFormat': 'CFA{amount}',
+        'moneyWithCurrencyFormat': 'CFA{amount} XOF'
     },
     'XPF': {
-        'money_format': '{amount} XPF',
-        'money_with_currency_format': '{amount} XPF'
+        'moneyFormat': '{amount} XPF',
+        'moneyWithCurrencyFormat': '{amount} XPF'
     },
     'ZAR': {
-        'money_format': 'R {amount}',
-        'money_with_currency_format': 'R {amount} ZAR'
+        'moneyFormat': 'R {amount}',
+        'moneyWithCurrencyFormat': 'R {amount} ZAR'
     },
     'ZMW': {
-        'money_format': 'K{amount}',
-        'money_with_currency_format': 'ZMW{amount}'
+        'moneyFormat': 'K{amount}',
+        'moneyWithCurrencyFormat': 'ZMW{amount}'
     }
 };
 
 
-module.exports = MONEY_FORMATS;
+module.exports = MoneyFormats;

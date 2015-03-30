@@ -1,6 +1,6 @@
 'use strict';
 
-var MONEY_CURRENCIES_CONSTANTS = function() {
+var MoneyCurrenciesConstants = function() {
     const MONEY_CURRENCY_AED = 'AED';
     const MONEY_CURRENCY_ALL = 'ALL';
     const MONEY_CURRENCY_AMD = 'AMD';
@@ -125,4 +125,4 @@ var MONEY_CURRENCIES_CONSTANTS = function() {
     const MONEY_CURRENCY_ZMW = 'ZMW';
 };
 
-module.exports = MONEY_CURRENCIES_CONSTANTS;
+module.exports = MoneyCurrenciesConstants;

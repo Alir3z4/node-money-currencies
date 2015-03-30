@@ -1,27 +1,26 @@
 'use strict';
 
+var MoneyFormats = require('./config');
 var MoneyCurrency;
 
 MoneyCurrency = (function() {
+    var _moneyCurrency;
+
     function MoneyCurrency(moneyCurrency) {
-        this.moneyCurrency = moneyCurrency;
+        _moneyCurrency = moneyCurrency;
     }
 
-    MoneyCurrency.prototype.setMoneyCurrency = function(moneyCurrency1) {
-        this.moneyCurrency = moneyCurrency1;
-    };
-
     MoneyCurrency.prototype.currencyFormats = function() {
-        return Object.keys(MONEY_FORMATS)
+        return Object.keys(MoneyFormats)
     };
 
     MoneyCurrency.prototype.moneyFormat = function(amount) {
-        return MONEY_FORMATS[this.moneyCurrency]['money_format']
+        return MoneyFormats[_moneyCurrency]['moneyFormat']
             .replace('{amount}', amount);
     };
 
     MoneyCurrency.prototype.moneyWithCurrencyFormat = function(amount) {
-        return MONEY_FORMATS[this.moneyCurrency]['money_with_currency_format']
+        return MoneyFormats[_moneyCurrency]['moneyWithCurrencyFormat']
             .replace('{amount}', amount);
     };
 
