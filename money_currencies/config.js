@@ -1,4 +1,6 @@
-MONEY_FORMATS = {
+'use strict';
+
+var MONEY_FORMATS = {
     'AED': {
         'money_format': 'Dhs. {amount}',
         'money_with_currency_format': 'Dhs. {amount} AED'
@@ -488,3 +490,6 @@ MONEY_FORMATS = {
         'money_with_currency_format': 'ZMW{amount}'
     }
 };
+
+
+module.exports = MONEY_FORMATS;
