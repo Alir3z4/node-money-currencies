@@ -1,6 +1,6 @@
 {
   "name": "money-currencies",
-  "version": "1.0.0",
+  "version": "2015.3.31",
   "description": "Display money format and its filthy currencies, for all money lovers out there.",
   "main": "money_currencies/index.js",
   "scripts": {
