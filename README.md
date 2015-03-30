@@ -37,4 +37,5 @@ especially when tests and updated docs are included.
 ## License
 
 Copyright (c) 2015 Alireza Savand, contributors.
+
 Released under the [MIT license](https://tldrlegal.com/license/mit-license).
