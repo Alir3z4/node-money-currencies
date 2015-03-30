@@ -1,7 +1,5 @@
-## rss  [![Build Status](http://img.shields.io/travis/Alir3z4/node-money-currencies.svg)](https://travis-ci.org/Alir3z4/node-money-currencies) [![money-currencies](http://img.shields.io/npm/Alir3z4/money-currencies.svg)](https://www.npmjs.org/package/money-currencies)
+## Money Currencies [![Build Status](http://img.shields.io/travis/Alir3z4/node-money-currencies.svg)](https://travis-ci.org/Alir3z4/node-money-currencies) [![money-currencies](https://img.shields.io/npm/v/money-currencies.svg)](https://www.npmjs.org/package/money-currencies)
 
-
-# Money Currencies
 
 Display money format and its filthy currencies, for all money lovers out there.
 
