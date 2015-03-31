@@ -22,9 +22,18 @@ console.log(mc.moneyWithCurrencyFormat(13)) // $13 USD
 
 ## Tests
 
+`money-currencies` has been tested on various version of Node.js, including:
+
+- 0.12
+- 0.11
+- 0.10
+- iojs
+- iojs-v1.0.4
+
 ```
 npm test
 ```
+
 
 ## Contributing
 
